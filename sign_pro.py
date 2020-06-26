@@ -39,8 +39,7 @@ if c <7:
 else:
     if f == True:
         print(f"\u001b[31mAnd Your Pass** is :\u001b[37m {A.replace(A[3:-2],e)}") # Red
-    else:
-        if j == False:
-          print(f"\u001b[32mAnd Your Pass** is :\u001b[37m {A.replace(A[3:-2],e)}") # Green  
-        else:
-            print(f"\u001b[34mAnd Your Pass** is :\u001b[37m {A.replace(A[3:-2],e)}") # Blue
+    elif j == False:
+        print(f"\u001b[32mAnd Your Pass** is :\u001b[37m {A.replace(A[3:-2],e)}") # Green  
+    elif j == True:
+        print(f"\u001b[34mAnd Your Pass** is :\u001b[37m {A.replace(A[3:-2],e)}") # Blue
