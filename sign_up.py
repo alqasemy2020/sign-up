@@ -4,7 +4,7 @@ name = " ".join(name.split())
 key = ["~","`","!","@","#","$","%","^","&","*","(",")","-","=","[","]","{","}",";",":","\'","\"","|","\\","<",",",".",">","/","?","+"]
 if key[30] in name:
     print("sorry.You Only Can Write ( \"alpha\" + \"num\" , _ )") 
-else:
+else: 
     if key[0] in name:
         print("sorry.You Only Can Write ( \"alpha\" + \"num\" , _ )\u001b[0m")
     else:
@@ -122,7 +122,7 @@ else:
                                                                                                                             age = input("Enter your age : ")
                                                                                                                             b = age.isnumeric()  #----------------------------age-⬇
                                                                                                                             if b == False or int(age)>=80 :
-                                                                                                                                print("\u001b[31mWrong Age")
+                                                                                                                                print("\u001b[31mWrong Age\u001b[0m")
                                                                                                                                 print()
                                                                                                                             else:
                                                                                                                                 print()
@@ -153,7 +153,10 @@ else:
                                                                                                                                         print()
                                                                                                                                         if f == True:
                                                                                                                                             print(f"\u001b[31mAnd Your Pass** is :\u001b[0m {A.replace(A[3:-2],e)}") # Red
-                                                                                                                                            Change_Pass = input("\u001b[30;1mYour password is very weak \u001b[0m keep or update \u001b[30;1mThe password\u001b[0m:").strip().capitalize()
+                                                                                                                                            
+                                                                                                                                            Change_Pass = input("\u001b[30;1mYour password is very weak \u001b[0m keep or update \u001b[30;1mThe password\u001b[0m: ").strip().capitalize()
+                                                                                                                                            
+                                                                                                                                            # Updating Option
                                                                                                                                             if Change_Pass=="Update":
                                                                                                                                                 TheNewPassword = input("Enter the new password \'add some letter\' : ")
                                                                                                                                                 A = TheNewPassword
@@ -162,13 +165,17 @@ else:
                                                                                                                                                 eU = "*" * dU
                                                                                                                                                 fU = A.isnumeric()
                                                                                                                                                 jU = A.istitle()
-                                                                                                                                                
                                                                                                                                                 if jU == False:
                                                                                                                                                     print(f"\u001b[32mYour New Pass*** is :\u001b[0m {A.replace(A[3:-2],eU)}") # Green 
                                                                                                                                                 else:
                                                                                                                                                     print(f"\u001b[34mYour New Pass*** is :\u001b[0m {A.replace(A[3:-2],eU)}") # Blue
+                                                                                                                                            # Keeping Option
+                                                                                                                                            elif Change_Pass=="Keep":
+                                                                                                                                                print(f"\u001b[30mAnd Your Pass*** is :\u001b[0m {A.replace(A[3:-2],e)}")
+                                                                                                                                            # Wrong Option
                                                                                                                                             else:
-                                                                                                                                                print()
+                                                                                                                                                print("\u001b[30mworng option choosed\u001b[0m")
+
                                                                                                                                         elif j == False:
                                                                                                                                             print(f"\u001b[32mAnd Your Pass*** is :\u001b[0m {A.replace(A[3:-2],e)}") # Green
                                                                                                                                         else:
