@@ -1,8 +1,9 @@
 user = []
 
+import re
 
 def user_name(name):
-    key = ["~","`","!","@","#","$","%","^","&","*","(",")","-","=","[","]","{","}",";",":","\'","\"","|","\\","<",",",".",">","/","?","+"]
+    key = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "[", "]", "{", "}", ";", ":", "\'", "\"", "|", "\\", "<", ",", ".", ">", "/", "?", "+"]
     a = 0
     while a < len(key) :  # 31
         if key[a] in name:
@@ -26,14 +27,28 @@ def user_age(age):
         return user.append(age)
 
 
-def user_email(email):
-    key2 = "@"
-    for b in email:
-        if b == key2:
-            user.append(f"{email}")
+def user_email():
+    btw = 20
+    while btw > 0:
+        try:
+            email = input("enter your email : ")
+            my_re = re.search(r"^[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|edu|co|ru|sa|uk)$",email)
+            chk_email =  re.search(r"^[A-z0-9\.]+",email)
+            chk = len(chk_email.group())
+            if chk > 30:
+                print("The Email Should Be Between 6 and 30 characters")
+                btw -= 1
+                a
+            else:
+                user.append(my_re.group())
             break
+        except:
+            print("wrong email")
+            btw -= 1
     else:
-        user.append(f"{email}@gmail.com")
+        print("Are You Kidding With Me ?!")
+
+
 
 
 def user_password(passwordd):
