@@ -11,7 +11,7 @@ if len(sho.user) == 1:
 
 
 if len(sho.user) == 2:
-    sho.user_email(input("enter your email : "))
+    sho.user_email()
 
 if len(sho.user) == 3:
     sho.user_password(input("enter your password : "))
